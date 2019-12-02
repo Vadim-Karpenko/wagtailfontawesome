@@ -1,0 +1,14 @@
+$fa-css-prefix: icon-fa;
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+
+/* `.stream-menu` is for backwards-compatibility with very old Wagtail versions. */
+.icon, .stream-menu .icon {
+  &[class^="#{$fa-css-prefix}-"],
+  &[class*=" #{$fa-css-prefix}-"] {
+    &:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+  }
+}
